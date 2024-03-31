@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Kadane's algorithm
 int kadane(vector<int>& nums) {
     int maxEndingHere = nums[0];
     int maxSoFar = nums[0];
