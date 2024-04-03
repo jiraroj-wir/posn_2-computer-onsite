@@ -9,7 +9,7 @@
 
 #include <bits/stdc++.h>
 
-#define N 60
+#define N 1000
 
 static const int verbose = 1;
 
@@ -206,6 +206,8 @@ int main(int argc, char **argv)
 {
     int restartx = 1, restarty = 1;
 
+    int a, b;
+    std::cin >> a >> b;
     if (argc > 1) {
         restartx = std::atoi(argv[1]);
         if (argc > 2) {
@@ -248,7 +250,7 @@ int main(int argc, char **argv)
                 if (x % d == 0 && y % d == 0 && table[x/d][y/d] < bound) {
                     bound = table[x/d][y/d];
                     std::stringstream s;
-                    s << "scale " << d;
+                    //s << "scale " << d;
                     reason = s.str();
                 }
             }
@@ -256,7 +258,7 @@ int main(int argc, char **argv)
                 if (table[h][y] + table[x-h][y] < bound) {
                     bound = table[h][y] + table[x-h][y];
                     std::stringstream s;
-                    s << "horizontal split at " << h;
+                    //s << "horizontal split at " << h;
                     reason = s.str();
                 }
             }
@@ -264,7 +266,7 @@ int main(int argc, char **argv)
                 if (table[x][v] + table[x][y-v] < bound) {
                     bound = table[x][v] + table[x][y-v];
                     std::stringstream s;
-                    s << "vertical split at " << v;
+                    //s << "vertical split at " << v;
                     reason = s.str();
                 }
             }
