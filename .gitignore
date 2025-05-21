@@ -30,3 +30,14 @@
 *.exe
 *.out
 *.app
+
+# macOS system files
+.DS_Store
+
+# Editor-specific files
+*~
+*.swp
+*.code-workspace
+
+# VSCode settings (optional)
+.vscode/
